@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>        
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="img/favicon.ico">      
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">      
+      <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+      <title>Neighborhood Map</title>
+  </head>
+  <body>
+      <div class="container">
+        <section class="locations-clmn">
+          <div class="title-bar">Title</div>
+          <div class="search-sct">Search</div>
+          <div class="locations-sct">Locations</div>          
+        </section>
+        <section class="map-clmn">
+            <div class="header-sct">Header</div>
+            <div id="map"></div> 
+        </section>
+      </div>      
+      
+      <script src="js/mapinit.js" async defer></script>    
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosAutXVlJSgA9oiXHzm46gxfA_USeCNk&callback=initMap" async defer></script>
+  </body>
+</html>
