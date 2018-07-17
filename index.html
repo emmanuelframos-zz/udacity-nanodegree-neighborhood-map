@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="findpl4ce">
   <head>        
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,18 @@
       <link href="css/normalize.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">      
       <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-      <title>Neighborhood Map</title>
+      <title>Find Pl4ce</title>
   </head>
   <body>
-      <div class="container">
+      <div class="container" ng-controller="FindPl4ceController as fpCtrl">
         <section class="locations-clmn">
           <div class="title-bar">Title</div>
           <div class="search-sct">Search</div>
-          <div class="locations-sct">Locations</div>          
+          <div class="locations-sct" style="display: flex; flex-direction: column">
+            <div class="location-itm" ng-repeat="location in fpCtrl.locations">
+              <label>{{location.name}}</label>
+            </div>
+          </div>          
         </section>
         <section class="map-clmn">
             <div class="header-sct">Header</div>
@@ -23,6 +27,9 @@
         </section>
       </div>      
       
+      <script src="js/angular.js" async defer></script>    
+      <script src="app/controllers/findpla4ce-controller.js"></script>
+      <script src="app/services/findpl4ce-service.js"></script>      
       <script src="js/mapinit.js" async defer></script>    
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosAutXVlJSgA9oiXHzm46gxfA_USeCNk&callback=initMap" async defer></script>
   </body>

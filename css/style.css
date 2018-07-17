@@ -29,13 +29,23 @@ div {
     border: 1px solid#000;
 }
 
-.locations-clmn .title-bar, .search-sct {
+.locations-clmn .title-bar {
     height: 15%;
+    border: 1px solid #000;
+}
+
+.locations-clmn .search-sct {
+    height: 12%;
     border: 1px solid #000;
 }
 
 .locations-clmn .locations-sct {
     height: 75%;
+    border: 1px solid #000;
+}
+
+.locations-clmn .location-itm {
+    height: 12%;
     border: 1px solid #000;
 }
 
