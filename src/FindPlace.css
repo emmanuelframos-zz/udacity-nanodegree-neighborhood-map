@@ -14,7 +14,7 @@
   height: 100%;
   right: 0;
 }
-.listView {
+.place-list {
   height: 100%;
   background-color: white;
   width: 15%;
@@ -22,6 +22,14 @@
   left: 0;
   padding: 0 15px;
   border-radius:0 10px 10px 0;
+  border-right: 2px solid #222a3e;
+}
+.place-item li{
+  list-style-type: circle;
+  padding-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
 }
 .nav{
   background-color: #222a3e;
@@ -40,6 +48,7 @@
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 12px;
+  padding-left: 1em !important;
 }
 input[type="text"]:focus{
   outline: none;
@@ -60,15 +69,6 @@ input[type="text"]:focus:hover{
 .main{
   height: 100%;
 }
-ul{
-  padding-right: 10px;
-  list-style-type: square;
-}
-li{
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 800px) {
   ul{
       font-size: 10px;

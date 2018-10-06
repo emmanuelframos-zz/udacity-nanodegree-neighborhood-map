@@ -1,0 +1,2 @@
+export const wikipediaGenericUrl = 'https://www.wikipedia.org';
+export const wikipediaSearchUrl  = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=$place&format=json&callback=wikiCallback';
