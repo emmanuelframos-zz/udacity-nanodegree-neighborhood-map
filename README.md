@@ -1,7 +1,7 @@
 # FindPl4ce
 
 ## Description
-An application to searching for some places and his informations.
+An application to search for some places and his informations.
 The application was built in [ReactJS](https://reactjs.org/).
 
 ## Installing NodeJs
