@@ -38,7 +38,7 @@ class FindPlace extends Component {
       });
       this.setState({ map: map });
     } else {
-      console.log("Cannot load Google Map.");
+      alert("Cannot load Google Map. Please refresh the page. ");
       this.setState({ mapLoaded: false })
     }
   }
@@ -124,9 +124,10 @@ class FindPlace extends Component {
         .then(response => response.json()).then((responseJson) => {
           let newData = [...this.state.data, [responseJson, responseJson[2][0], responseJson[3][0]]];
           this.refreshData(newData);
-        }).catch(error => 
-          console.error(error)
-        );
+        }).catch(error => {
+          console.error(error);
+          alert("Cannot find place on Wikipedia. Please refresh the page.");
+        });
     });
   }
 
