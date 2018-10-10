@@ -1,7 +1,8 @@
 # FindPl4ce
 
 ## Description
-An application to search for some places and his informations.  The application was built in [ReactJS](https://reactjs.org/).
+An application to search for some places and his informations.      
+The application was built in [ReactJS](https://reactjs.org/).
 
 ## Installing NodeJs
 - [Install](https://nodejs.org/en/download/) NodeJS
@@ -19,7 +20,8 @@ npm start
 ~~~
 
 ## Third-Party APIs
-In this application I have used Wikipedia API to search places data.  More informations at: [Wikipedia API Reference](https://www.mediawiki.org/wiki/API:Main_page). 
+In this application I have used Wikipedia API to search places data.       
+More informations at: [Wikipedia API Reference](https://www.mediawiki.org/wiki/API:Main_page). 
 
 ## Supported NodeJs Versions
 We recommend that you use NodeJS >= 8
