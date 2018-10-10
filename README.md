@@ -19,6 +19,10 @@ npm install
 npm start
 ~~~
 
+## Third-Party API Used
+In this application I have used Wikipedia API to search places data. 
+More informations at: [Wikipedia API Reference](https://www.mediawiki.org/wiki/API:Main_page) 
+
 ## Supported NodeJs Versions
 We recommend that you use NodeJS >= 8
 
