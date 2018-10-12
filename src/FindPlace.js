@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './FindPlace.css';
 import scriptLoader from 'react-async-script-loader';
-import { wikipediaGenericUrl, wikipediaSearchUrl } from './env';
-import { placeList } from './places.js';
 import escapeRegExp from 'escape-string-regexp';
 import sortBy from 'sort-by';
 import fetchJsonp from 'fetch-jsonp';
+import { wikipediaGenericUrl, wikipediaSearchUrl } from './env';
+import { placeList } from './places';
+import { SideBarMenuContainer } from './components/SideBarMenuContainer';
 
 let markers = [];
 let informations = [];
@@ -145,6 +146,10 @@ class FindPlace extends Component {
     }
   }
 
+  onChangeFilter = (event)=> {
+    this.refreshSearch(event.target.value);
+  }
+
   render() {
 
     const { places, query, mapLoaded } = this.state;
@@ -170,21 +175,14 @@ class FindPlace extends Component {
             <div id="map-container" tabIndex="-1">
               <div id="map" aria-label="Places in Brazil"></div>
             </div>
-            <div className='place-list'>
-              <input id="place-filter" 
-                className='form-control' 
-                type='text'
-                placeholder='Filter Place...'
-                value={query}
-                onChange={(event) => this.refreshSearch(event.target.value)}                
-                aria-labelledby="Search a Place"
-                tabIndex="1" />
-              <ul className="place-item" aria-labelledby="list of places" tabIndex="1">
-                {placesExhibited.map((place, index) =>
-                  <li key={index} tabIndex={index + 2}
-                    area-labelledby={`Informations of ${place.name}`} onKeyPress={this.handleKeyPress.bind(this, place)} onClick={this.listItem.bind(this, place)}>{place.name}</li>)}
-              </ul>
-            </div>
+
+            <SideBarMenuContainer 
+              query={this.query} 
+              onChangeFilter={this.onChangeFilter} 
+              placesExhibited={placesExhibited} 
+              handleKeyPress={this.handleKeyPress} 
+              listItem={this.listItem}
+            />          
           </div>
         </div>
       ) : (
